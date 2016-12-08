@@ -13,7 +13,7 @@ To deliver with the API an api-key and secret are needed in order for the petiti
 
 Que ocurre en este endpoint 
 
-Ejemplo de uso:  controlpack/api/v1/endpoint1
+Ejemplo de uso:  [**controlpack/api/v1/endpoint1**]()
 
 Respuesta:
 <pre>
