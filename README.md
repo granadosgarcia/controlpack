@@ -3,7 +3,7 @@
 
 ## Contents
 - Usage
--- Endpoints
+- Endpoints
 
 
 ## Usage
@@ -16,7 +16,7 @@ Que ocurre en este endpoint
 Ejemplo de uso:  controlpack/api/v1/endpoint1
 
 Respuesta:
->```
+>
 >{
 >    "metadata": {
 >        "resultset": {
@@ -27,7 +27,7 @@ Respuesta:
 >    },
 >        "results": []
 >}
->```
+>
 
 
 ## History
