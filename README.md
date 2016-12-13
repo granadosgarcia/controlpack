@@ -1,39 +1,95 @@
-# Pack&Pack
-## Control-pack API
+# Control-pack API
 
-## Contents
-- Usage
+## Contenido
+
+- Uso
 - Endpoints
 
 
-## Usage
-To deliver with the API an api-key and secret are needed in order for the petitions to work
+## Uso
+Puntos clave de la API para poder cotizar y ordenar:
 
-### GET /endpoint1/
+- se necesita un apikey
 
-Que ocurre en este endpoint 
+## GET /preorder/?delivery=LAT,LON&pickup=LAT,LON
 
-Ejemplo de uso:  [**controlpack/api/v1/endpoint1**]()
+Aquí se cotiza y se ve la disponibilidad de una entrega entres los dos puntos que se entregan en el query 
+ 
 
-Respuesta:
+__Ejemplo de uso:__
+ 
+[**/api/v1/preorder/?delivery=19.4376401,-99.1758606&pickup=19.4376401,-99.1758606**]()
+
+Se cotiza un envío del angel de la independencia a la fuente de la cibeles  
+
+**Respuesta:**
 <pre>
 {
-    "metadata": {
-        "resultset": {
-            "count": 227,
-                "offset": 25,
-                "limit": 25
-        }
-    },
-        "results": []
+    "preorder": {
+    	"id": 1022, //INT numero de preorden
+		"possible": True, //BOOLEAN sobre si se puede completar
+		"drivers": 2, //INT de posibles conductores cerca
+		"cost": 25,000, //INT de centavos mexicanos
+		"eta": 19, //INT de minutos
+    }
+}
+</pre>
+
+## GET /order/?preorder=PREORDERID
+
+Aquí se hace el pedido a partir de un id de preorden ya realizado 
+
+__Ejemplo de uso:__
+ 
+[**/api/v1/order/?preorder=1022**]()
+
+Se confirma un envío del angel de la independencia a la fuente de la cibeles con el id 1022 
+
+**Respuesta:**
+<pre>
+{
+    "order": {
+    	"status": Processing, //STRING with the status of the order
+    	"id": 2, //INT numero de orden
+    	"cost": 25,000, //INT de centavos mexicanos
+		"orderDate": 2017-04-17T02:00:00.000Z, //Date en que se pidió
+		"pickupDate": 2017-04-17T02:10:00.000Z, //Date en que se recogió
+		"deliveryDate": 2017-04-17T02:20:00.000Z, //Date en que se entregó
+		"estimatedArrival": 2017-04-17T02:18:00.000Z //Date estimada entrega
+		"driver": 132, //ID del conductor
+		"currently": "19.4376401,-99.1758606", //String with live coordinates
+		"driverPhone": 12311231231 //INT with phone number
+    }
+}
+</pre>
+
+## GET /order/?delivery=LAT,LON&pickup=LAT,LON
+
+Aquí se hace el pedido a partir de un par de puntos sin haber preordenado  
+
+__Ejemplo de uso:__
+ 
+[**/api/v1/order/?preorder=1022**]()
+
+Se confirma un envío del angel de la independencia a la fuente de la cibeles con el id 1022 
+
+**Respuesta:**
+<pre>
+{
+    "order": {
+    	"status": Processing, //STRING with the status of the order
+    	"id": 2, //INT numero de orden
+    	"cost": 25,000, //INT de centavos mexicanos
+		"orderDate": 2017-04-17T02:00:00.000Z, //Date en que se pidió
+		"pickupDate": 2017-04-17T02:10:00.000Z, //Date en que se recogió
+		"deliveryDate": 2017-04-17T02:20:00.000Z, //Date en que se entregó
+		"estimatedArrival": 2017-04-17T02:18:00.000Z //Date estimada entrega
+		"driver": 132, //ID del conductor
+		"currently": "19.4376401,-99.1758606", //String with live coordinates
+		"driverPhone": 12311231231 //INT with phone number
+    }
 }
 </pre>
 
 
-## History
-
-## Credits
-
-## License
---- 
 
