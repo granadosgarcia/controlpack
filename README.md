@@ -28,14 +28,14 @@ Se cotiza un envío del angel de la independencia a la fuente de la cibeles
     "preorder": {
     	"id": 1022, //INT numero de preorden
 		"possible": True, //BOOLEAN sobre si se puede completar
-		"drivers": 2, //INT de posibles conductores cerca
 		"cost": 25,000, //INT de centavos mexicanos
 		"eta": 19, //INT de minutos
     }
 }
 </pre>
 
-## GET /order/?preorder=PREORDERID
+## GET /order/?preorder=PREORDERID&phone=NUM&name=NOMBRE&phone=NUMBER
+
 
 Aquí se hace el pedido a partir de un id de preorden ya realizado 
 
@@ -56,14 +56,15 @@ Se confirma un envío del angel de la independencia a la fuente de la cibeles co
 		"pickupDate": 2017-04-17T02:10:00.000Z, //Date en que se recogió
 		"deliveryDate": 2017-04-17T02:20:00.000Z, //Date en que se entregó
 		"estimatedArrival": 2017-04-17T02:18:00.000Z //Date estimada entrega
-		"driver": 132, //ID del conductor
 		"currently": "19.4376401,-99.1758606", //String with live coordinates
-		"driverPhone": 12311231231 //INT with phone number
+		"clientPhone": 12311231231, //INT with phone number
+		"clientName": "Kevin Perez", //INT with phone number
+		"clientAddress": "Bahia Chachalacas" //STRING with address
     }
 }
 </pre>
 
-## GET /order/?delivery=LAT,LON&pickup=LAT,LON
+## GET /order/?delivery=LAT,LON&pickup=LAT,LON&phone=NUM&name=NOMBRE&phone=NUMBER
 
 Aquí se hace el pedido a partir de un par de puntos sin haber preordenado  
 
@@ -84,9 +85,10 @@ Se confirma un envío del angel de la independencia a la fuente de la cibeles co
 		"pickupDate": 2017-04-17T02:10:00.000Z, //Date en que se recogió
 		"deliveryDate": 2017-04-17T02:20:00.000Z, //Date en que se entregó
 		"estimatedArrival": 2017-04-17T02:18:00.000Z //Date estimada entrega
-		"driver": 132, //ID del conductor
 		"currently": "19.4376401,-99.1758606", //String with live coordinates
-		"driverPhone": 12311231231 //INT with phone number
+		"clientPhone": 12311231231, //INT with phone number
+		"clientName": "Kevin Perez", //STRING with phone number
+		"clientAddress": "Bahia Chachalacas" //STRING with address
     }
 }
 </pre>
