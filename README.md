@@ -137,6 +137,14 @@ Se checa el estado de la orden 1022
 ## POST /orders/:id
 
 Petición para actualizar una orden. Puede confirmarse el status o actualizar la información del cliente
+
+
+| Argumento     | Descripción   | 
+| ------------- |:-------------| 
+| request      | Un boolean que indica si ya se quiere iniciar el proceso de entrega | 
+| clientPhone | El número de telefono del cliente. Ejemplo: <br> 223232333     | 
+| clientName    | Un string arbitrario con el nombre de la persona que recibirá: "Kevin Perez"      | 
+| clientAddress    | Un string arbitrario con la dirección a donde se entrega. Ejemplo: <br> "Paseo de la Reforma 222. Interior 20"      | 
  
 
 __Ejemplo de uso:__
@@ -148,7 +156,6 @@ Se cotiza un envío del angel de la independencia a la fuente de la cibeles
 **Request body**
 <pre>
 {
-	"status": "cotizacion", //STRING con el estado
 	"request": True, //Boolean que solicita el pedido y activa la orden
 	"clientPhone": 222123123, //INT with phone number
 	"clientName": "Kevin Perez", //INT with phone number
