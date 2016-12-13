@@ -41,7 +41,7 @@ Aquí se hace el pedido a partir de un id de preorden ya realizado
 
 __Ejemplo de uso:__
  
-[**/api/v1/order/?preorder=1022**]()
+[**/api/v1/order/?preorder=1022&phone=222123123&name=Kevin%20Perez&address=Colima12**]()
 
 Se confirma un envío del angel de la independencia a la fuente de la cibeles con el id 1022 
 
@@ -57,9 +57,9 @@ Se confirma un envío del angel de la independencia a la fuente de la cibeles co
 		"deliveryDate": 2017-04-17T02:20:00.000Z, //Date en que se entregó
 		"estimatedArrival": 2017-04-17T02:18:00.000Z //Date estimada entrega
 		"currently": "19.4376401,-99.1758606", //String with live coordinates
-		"clientPhone": 12311231231, //INT with phone number
+		"clientPhone": 222123123, //INT with phone number
 		"clientName": "Kevin Perez", //INT with phone number
-		"clientAddress": "Bahia Chachalacas" //STRING with address
+		"clientAddress": "Colima 12" //STRING with address
     }
 }
 </pre>
@@ -71,7 +71,7 @@ Aquí se hace el pedido a partir de un par de puntos sin haber preordenado
 
 __Ejemplo de uso:__
  
-[**/api/v1/order/?preorder=1022**]()
+[**/api/v1/order/?preorder=1022&phone=222123123&name=Kevin%20Perez&address=Colima12**]()
 
 Se confirma un envío del angel de la independencia a la fuente de la cibeles con el id 1022 
 
@@ -87,9 +87,9 @@ Se confirma un envío del angel de la independencia a la fuente de la cibeles co
 		"deliveryDate": 2017-04-17T02:20:00.000Z, //Date en que se entregó
 		"estimatedArrival": 2017-04-17T02:18:00.000Z //Date estimada entrega
 		"currently": "19.4376401,-99.1758606", //String with live coordinates
-		"clientPhone": 12311231231, //INT with phone number
+		"clientPhone": 222123123, //INT with phone number
 		"clientName": "Kevin Perez", //STRING with phone number
-		"clientAddress": "Bahia Chachalacas" //STRING with address
+		"clientAddress": "Colima 12" //STRING with address
     }
 }
 </pre>
