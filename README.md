@@ -34,7 +34,7 @@ Se cotiza un envío del angel de la independencia a la fuente de la cibeles
 }
 </pre>
 
-## GET /order/?preorder=PREORDERID&phone=NUM&name=NOMBRE&phone=NUMBER
+## GET /order/?preorder=PREORDERID&phone=NUM&name=NOMBRE&address=DIRECCION
 
 
 Aquí se hace el pedido a partir de un id de preorden ya realizado 
@@ -64,7 +64,8 @@ Se confirma un envío del angel de la independencia a la fuente de la cibeles co
 }
 </pre>
 
-## GET /order/?delivery=LAT,LON&pickup=LAT,LON&phone=NUM&name=NOMBRE&phone=NUMBER
+## GET /order/?delivery=LAT,LON&pickup=LAT,LON&phone=NUM&name=NOMBRE&address=DIRECCION
+
 
 Aquí se hace el pedido a partir de un par de puntos sin haber preordenado  
 
